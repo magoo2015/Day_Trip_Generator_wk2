@@ -1,5 +1,5 @@
-import random
-from secrets import randbelow # For random selections
+import random # For random selections
+
 
 #Lists for destinations, restaurants, transportation, and entertainment.
 
@@ -8,7 +8,7 @@ restaurant_list = ["Texas RoadHouse", "Rafains", "Hard Rock Cafe", "Toby Keith B
 transportation_list = ["Bus", "Train", "Horse Carriage", "Uber/LIFT", "Rapid Transit"]
 entertainment_list = ["Six Flags", "NBA Game", "UFC: Israel Adesayna vs. Robert Whitaker", "Sea World", "WWE WrestleMania"]
 
-user_trip_details = []
+user_trip_details = [] #Hold user selections here.
 
 #Stuck on selecting the destination randomly
 def user_destination():
@@ -25,10 +25,12 @@ def user_destination():
             user_trip_details.append(selected_destination)
             dest_confirmed = False
         elif user_choice == "n":
-            destinations_list.remove(random_destinations)
+            destinations_list.remove(random_destinations) # Put here to remove bad choice.
             random_destinations = random.choice(destinations_list)
             user_choice = input(f"Sorry that does not work for you, how about {random_destinations} Enter y/n: ")
             dest_confirmed = True
+
+#Reuse the format of previous function for remaining functions.
 
 
 def user_restaurant():
@@ -75,7 +77,7 @@ def user_entertainment():
     entertainment_confirmed = True
     selected_entertainment = [""]
     random_entertainment = random.choice(entertainment_list)
-    user_choice = input(f"Have you thought of entertainment ideas, We think {random_entertainment} would be great.  What do you thinkg?  Enter y'n: ")
+    user_choice = input(f"Have you thought of entertainment ideas, We think {random_entertainment} would be great.  What do you thinkg?  Enter y/n: ")
 
     while entertainment_confirmed == True:
         
