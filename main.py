@@ -12,6 +12,7 @@ user_trip_details = []
 #Stuck on selecting the destination randomly
 def user_destination():
     dest_confirmed = True
+    undesirable_destinations = [""]
     selected_destination = [""]
     random_destinations = random.choice(destinations_list)
     user_choice = input(f"How does {random_destinations} sound for your destination? Enter y/n: ")
@@ -24,6 +25,7 @@ def user_destination():
             user_trip_details.append(selected_destination)
             dest_confirmed = False
         elif user_choice == "n":
+            destinations_list.remove(random_destinations)
             random_destinations = random.choice(destinations_list)
             user_choice = input(f"Sorry that does not work for you, how about {random_destinations} Enter y/n: ")
             dest_confirmed = True
