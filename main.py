@@ -92,10 +92,13 @@ def user_entertainment():
 
 
 def trip_confirmed():
-    print("""f"Your selected destination is {user_trip_details[0]},
-     you will be traveling via {user_trip_details[1]},
-      for entertainment you have chosen {user_trip_details[2]},
-       you will be dining at {user_trip_details[3]}""")
+    print(f"Your selected destination is {user_trip_details[0]}, you will be traveling via {user_trip_details[1]}, for entertainment you have chosen {user_trip_details[2]}, you will be dining at {user_trip_details[3]}")
+    user_choice = input(f"Please Enter 'y' to confirm you trip or 'n' to start over.  Enter y/n: ")
+    if user_choice == "y":
+        print(f"Here is your final confirmation:\n Destination:  {user_trip_details[0]}\n Type of Travel:  {user_trip_details[1]}\n Entertainment:  {user_trip_details[2]}\n Dining:  {user_trip_details[3]}")
+        print("Thank you for using the Trip Generator")
+    elif user_choice == "n":
+        run_trip_generator()
     
 
 
@@ -104,11 +107,13 @@ def trip_confirmed():
 
 
 
-def run_trip_generator():   
+def run_trip_generator():
+    print("Welcome to the trip generator, where we help you plan your next vacation!")   
     user_destination()
     user_transportation()
     user_entertainment()
     user_restaurant()
+    trip_confirmed()
 
 run_trip_generator()
 
