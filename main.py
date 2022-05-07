@@ -91,13 +91,29 @@ def user_entertainment():
             entertainment_confirmed = True
 
 
-user_destination()
-user_transportation()
-user_entertainment()
-user_restaurant()
-print(f"Your selected destination is {user_trip_details[0]}, you will be traveling via {user_trip_details[1]}, for entertainment you have chosen {user_trip_details[2]}, you will be dining at {user_trip_details[3]}") 
+def trip_confirmed():
+    print("""f"Your selected destination is {user_trip_details[0]},
+     you will be traveling via {user_trip_details[1]},
+      for entertainment you have chosen {user_trip_details[2]},
+       you will be dining at {user_trip_details[3]}""")
+    
+
+
+
+
+
+
+
+def run_trip_generator():   
+    user_destination()
+    user_transportation()
+    user_entertainment()
+    user_restaurant()
+
+run_trip_generator()
 
     
+
 
 
 
