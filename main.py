@@ -57,7 +57,7 @@ def user_transportation():
     transportation_confirmed = True
     selected_transportation = [""]
     random_transportation = random.choice(transportation_list)
-    user_choice = input(f"What travel by {random_transportation} be acceptable for your vacation?  Enter y/n:  ")
+    user_choice = input(f"Would travel by {random_transportation} be acceptable for your vacation?  Enter y/n:  ")
 
     while transportation_confirmed == True:
 
@@ -77,7 +77,7 @@ def user_entertainment():
     entertainment_confirmed = True
     selected_entertainment = [""]
     random_entertainment = random.choice(entertainment_list)
-    user_choice = input(f"Have you thought of entertainment ideas, We think {random_entertainment} would be great.  What do you thinkg?  Enter y/n: ")
+    user_choice = input(f"Have you thought of entertainment ideas, We think {random_entertainment} would be great.  What do you think?  Enter y/n: ")
 
     while entertainment_confirmed == True:
         
