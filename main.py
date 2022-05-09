@@ -87,6 +87,7 @@ def user_entertainment():
             entertainment_confirmed = False
         elif user_choice == "n":
             entertainment_list.remove(random_entertainment)
+            random_entertainment = random.choice(entertainment_list)
             user_choice = input(f" Ok, How about {random_entertainment}? Enter y/n: ")
             entertainment_confirmed = True
 
@@ -100,10 +101,6 @@ def trip_confirmed():
     elif user_choice == "n":
         run_trip_generator()
     
-
-
-
-
 
 
 
